@@ -31,3 +31,20 @@ newDiv.appendChild(newMainHeader);
 newDiv.appendChild(newP);
 
 container.appendChild(newDiv);
+
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("Hello World");
+
+const secondBtn = document.querySelector("#secondBtn");
+secondBtn.addEventListener("click", () => {
+    alert("Hello World");
+});
+
+const newBtn = document.createElement("button");
+newBtn.setAttribute("id", "newBtn");
+newBtn.addEventListener("click", function (e) {
+    e.target.style.background = "blue";
+});
+newBtn.textContent = "EEEEEE";
+
+container.appendChild(newBtn);
