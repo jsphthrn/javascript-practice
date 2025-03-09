@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=f, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        // javascript.info ex 1
+        let user = {};
+        user.name = 'John';
+        user.surname = 'Smith';
+        alert(user.name);
+        user.name = 'Pete';
+        alert(user.name);
+        delete user.name;
+        alert(user.name);
+
+        // javascript.info ex 2
+
+        function isEmpty(object) {
+            for (let property in object) {
+                return false;
+            }
+            return true;
+        }
+        
+        let schedule = {};
+        alert(isEmpty(schedule));
+        schedule["8:30"] = "Get up.";
+        alert(isEmpty(schedule));
+
+        // javascript.info ex 3
+
+        let salaries = {
+            //John: 100,
+            // Ann: 160,
+            // Pete: 130,
+        }
+
+        function sumSalaries(sal) {
+            let sum = 0;
+            for (let amount in sal) {
+                sum += +sal[amount];
+            }
+            return sum;
+        }
+
+        alert(sumSalaries(salaries));
+
+        /// javascript.info ex 4
+
+        function multiplyNumeric(obj) {
+            for (let prop in obj) {
+                if (Number(obj[prop]) === NaN) { 
+                    obj[prop] = obj[prop];
+                } else {
+                     obj[prop] = obj[prop] * 2; 
+                }
+            }
+        }
+
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu",  
+        };
+
+        multiplyNumeric(menu);
+
+        // array ex. 1
+
+        function camelize(str) {
+            let arr = str.split('-');
+            arr.forEach((element, index) => {
+                (index !== 0) ? element[0] = element[0].toUpperCase() : element = element
+            });
+            return arr.join('');
+        }
+
+        alert(camelize('background-color'));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

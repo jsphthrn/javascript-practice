@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+    
+    bandInfo = {
+        name: "The Black Keys",
+        nationality: "American",
+        genre: "Rock/Blues",
+        members: ["Dan Auerbach", "Patrick Carney"],
+        formed: 2001,
+        split: false,
+        albums: [["The Big Come Up", 2002], ["Thickfreakness", 2003,]],
+           
+           /* { name: "Rubber Factory", released: 2004,}, { name: "Magic Potion", released: 2006,},
+            { name: "Attack and Release", released: 2008,}, { name: "Brothers", released: 2010,},
+            { name: "El Camino", released: 2011,}, { name: "Turn Blue", released: 2014,},
+            { name: "Let's Rock", released: 2019,}, { name: "Delta Kream", released: 2021,}, 
+            { name: "Dropout Boogie", released: 2022,}, { name: "Ohio Players", released: 2024,},],
+
+            */
+    }
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>
