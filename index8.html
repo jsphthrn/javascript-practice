@@ -71,8 +71,18 @@
 
         function camelize(str) {
             let arr = str.split('-');
+            let newWord = `${arr[0]}`;
+            let aux1;
+            let aux2;
             arr.forEach((element, index) => {
-                (index !== 0) ? element[0] = element[0].toUpperCase() : element = element
+                if (index > 0) {
+                    aux1 = element;
+                    aux2 = aux1;
+                    aux1 = aux1.toUpperCase();
+                    aux1 = aux1.slice(0,1);
+                    aux2 = aux2.slice(1);
+                    arr[index] = `${aux1}${aux2}`;
+                }
             });
             return arr.join('');
         }
