@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=f, initial-scale=1.0">
     <title>Document</title>
     <script defer>
+        /*
         // javascript.info ex 1
         let user = {};
         user.name = 'John';
@@ -87,7 +88,29 @@
             return arr.join('');
         }
 
-        alert(camelize('background-color'));
+        alert(camelize("background-color") == 'backgroundColor');
+        alert(camelize("list-style-image") == 'listStyleImage');
+        alert(camelize("-webkit-transition") == 'WebkitTransition');
+
+        */
+
+        // javascript.info ex 5
+
+        // Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array.
+
+        function filterRange(arr, bigger, less) {
+            let newArray = [];
+            arr.forEach((value, index) => {
+                if (value >= bigger && value <= less) {
+                    newArray.push(value);
+                } 
+            });
+            return newArray;
+        }
+
+        let myNewArray = [5, 3, 8, 1]
+        alert(myNewArray);
+        alert(filterRange(myNewArray, 1, 4));
 
     </script>
 </head>
